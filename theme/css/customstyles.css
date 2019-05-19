@@ -1204,3 +1204,7 @@ h4.panel-title {
 p {
   font-size: 1em !important;
 }
+
+img.logo {
+  width: 90px;
+}
