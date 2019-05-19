@@ -1208,3 +1208,7 @@ p {
 img.logo {
   width: 90px;
 }
+
+.listingblock .content {
+  max-width: 100%;
+}
