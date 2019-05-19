@@ -279,6 +279,77 @@ A list continuation is a line with only a plus character.
 attached paragraph
 ----
 
+== Links
+Defining links in AsciiDoc is simple and easy, like Markdown, but provides additional options you won't find in Markdown.
+
+
+.External
+----
+
+https://asciidoctor.org - automatic!
+
+https://asciidoctor.org[Asciidoctor]
+
+https://github.com/asciidoctor[Asciidoctor @ *GitHub*]
+
+----
+
+[.result]
+====
+https://asciidoctor.org - automatic!
+
+https://asciidoctor.org[Asciidoctor]
+
+https://github.com/asciidoctor[Asciidoctor @ *GitHub*]
+====
+
+.With spaces and special characters
+----
+link:++https://example.org/?q=[a b]++[URL with special characters]
+
+link:https://example.org/?q=%5Ba%20b%5D[URL with special characters]
+----
+
+[.result]
+====
+link:++https://example.org/?q=[a b]++[URL with special characters]
+
+link:https://example.org/?q=%5Ba%20b%5D[URL with special characters]
+====
+
+.Windows path
+----
+link:\\server\share\whitepaper.pdf[Whitepaper]
+----
+
+[.result]
+====
+include::{includedir}/ex-url.adoc[tag=b-windows]
+====
+
+.Relative
+----
+link:index.html[Docs]
+----
+
+[.result]
+====
+link:\\server\share\whitepaper.pdf[Whitepaper]
+====
+
+.Email and IRC
+----
+devel@discuss.arquillian.org
+
+mailto:devel@discuss.arquillian.org[Discuss Arquillian]
+
+mailto:devel-join@discuss.arquillian.org[Subscribe,Subscribe me,I want to join!]
+
+irc://irc.freenode.org/#fedora
+----
+
+
+
 ////
 == TODO
 
