@@ -6,7 +6,9 @@ topnav_title: Write the {Ascii}Docs
 site_title: Write the {Ascii}Docs
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
-company_name: Asciidoctor
+company:
+  name: Asciidoctor
+  logo: asciidoctor_logo.svg # filename in theme/images
 # this appears in the footer
 
 github_editme_path: DocOps/wtd2019/blob/master/
@@ -26,6 +28,7 @@ plugins_dir:  _plugins
 layouts_dir:  theme/_layouts
 includes_dir: theme/_includes
 images_dir:   ../theme/images
+images_path:  /theme/images
 css_dir:      theme/css
 js_dir:       theme/js
 destination:  _build
