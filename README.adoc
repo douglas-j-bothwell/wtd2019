@@ -102,7 +102,7 @@ Install it, then install the package *AsciiDoc Assistant* (menu:Preferences[+ In
 
 ==== Deployment
 
-The `origin` repository is on GitHub, and draft previews are built and deployed using Netlify, which also hosts the published version at http://adoc-wtd-2019.netlify.com.
+The `origin` repository is on GitHub, and draft previews are built and deployed using Netlify, which also hosts the published version at https://writetheasciidocs.netlify.com/.
 
 ==== Alternative Tools
 
