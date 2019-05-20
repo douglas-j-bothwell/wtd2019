@@ -429,6 +429,125 @@ mailto:devel-join@discuss.arquillian.org[Subscribe,Subscribe me,I want to join!]
 irc://irc.freenode.org/#fedora
 ====
 
+
+== Links
+Defining links in AsciiDoc is simple and easy, like Markdown, but provides additional options you won't find in Markdown.
+
+
+.External
+----
+
+https://asciidoctor.org - automatic!
+
+https://asciidoctor.org[Asciidoctor]
+
+https://github.com/asciidoctor[Asciidoctor @ *GitHub*]
+
+----
+
+[.result]
+====
+https://asciidoctor.org - automatic!
+
+https://asciidoctor.org[Asciidoctor]
+
+https://github.com/asciidoctor[Asciidoctor @ *GitHub*]
+====
+
+.With spaces and special characters
+----
+link:++https://example.org/?q=[a b]++[URL with special characters]
+
+link:https://example.org/?q=%5Ba%20b%5D[URL with special characters]
+----
+
+[.result]
+====
+link:++https://example.org/?q=[a b]++[URL with special characters]
+
+link:https://example.org/?q=%5Ba%20b%5D[URL with special characters]
+====
+
+.Windows path
+----
+link:\\server\share\whitepaper.pdf[Whitepaper]
+----
+
+[.result]
+====
+link:\\server\share\whitepaper.pdf[Whitepaper]
+====
+
+.Relative
+----
+link:index.html[Docs]
+----
+
+[.result]
+====
+link:index.html[Docs]
+====
+
+.Email and IRC
+----
+devel@discuss.arquillian.org
+
+mailto:devel@discuss.arquillian.org[Discuss Arquillian]
+
+mailto:devel-join@discuss.arquillian.org[Subscribe,Subscribe me,I want to join!]
+
+irc://irc.freenode.org/#fedora
+----
+
+
+
+[.result]
+====
+devel@discuss.arquillian.org
+
+mailto:devel@discuss.arquillian.org[Discuss Arquillian]
+
+mailto:devel-join@discuss.arquillian.org[Subscribe,Subscribe me,I want to join!]
+
+irc://irc.freenode.org/#fedora
+====
+
+////
+START
+////
+
+.Link with attributes (Asciidoctor only)view result
+----
+http://discuss.asciidoctor.org[Discuss Asciidoctor,role=external,window=_blank]
+
+http://discuss.asciidoctor.org[Discuss Asciidoctor^]
+
+https://example.org["Google, Yahoo, Bing^",role=teal]
+----
+[NOTE]
+Links with attributes (including the subject and body segments on mailto links) are a feature unique to Asciidoctor. To enable them prior to 1.5.7, you must set the linkattrs attribute on the document. Since 1.5.7, attribute parsing is enabled automatically if an equal sign follows a comma. When attribute parsing is enabled, you must quote the link text if it contains a comma.
+Inline anchorsview result
+[[bookmark-a]]Inline anchors make arbitrary content referenceable.
+
+[#bookmark-b]#Inline anchors can be applied to a phrase like this one.#
+
+anchor:bookmark-c[]Use a cross reference to link to this location.
+
+[[bookmark-d,last paragraph]]The xreflabel attribute will be used as link text in the cross-reference link.
+Internal cross referencesview result
+See <<paragraphs>> to learn how to write paragraphs.
+
+Learn how to organize the document into <<section-titles,sections>>.
+Inter-document cross references (Asciidoctor only)
+Refer to <<document-b.adoc#section-b,Section B>> for more information.
+
+See you when you get back from <<document-b#section-b,Section B>>!
+
+////
+END
+////
+
+
 ////
 To add:
 * Link with attributes (Asciidoctor only)
